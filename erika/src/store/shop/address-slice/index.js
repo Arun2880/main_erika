@@ -7,27 +7,27 @@ const initialState = {
 }
 
 export const addNewAddress =createAsyncThunk('/address/addNewAddress', async(formData)=>{
-  const response = await axios.post(`http://localhost:5000/api/shop/address/add`, formData ) ;
+  const response = await axios.post(`https://erikahennaherbal.com/api/shop/address/add`, formData ) ;
 
   return response.data;
 })
 
 export const fetchAllAddresses =createAsyncThunk('/address/fetchAllAddresses', async(userId)=>{
-  const response = await axios.get(`http://localhost:5000/api/shop/address/get/${userId}` ) ;
+  const response = await axios.get(`https://erikahennaherbal.com/api/shop/address/get/${userId}` ) ;
 
   return response.data;
 })
 
 
 export const ediitaAddress =createAsyncThunk('/address/ediitaAddress', async({userId, addressId, formData})=>{
-  const response = await axios.put(`http://localhost:5000/api/shop/address/edit/${userId}/${addressId}`, formData ) ;
+  const response = await axios.put(`https://erikahennaherbal.com/api/shop/address/edit/${userId}/${addressId}`, formData ) ;
 
   return response.data;
 })
 
 
 export const deleteAddress =createAsyncThunk('/address/deleteAddress', async({userId, addressId})=>{
-  const response = await axios.delete(`http://localhost:5000/api/shop/address/delete/${userId}/${addressId}
+  const response = await axios.delete(`https://erikahennaherbal.com/api/shop/address/delete/${userId}/${addressId}
     `) ;
 
   return response.data;

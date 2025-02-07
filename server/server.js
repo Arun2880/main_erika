@@ -42,7 +42,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/erika', {
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://erikahennaherbal.com/',
     methods: ['GET', 'POST', 'DELETE', 'PUT'],
     allowedHeaders: [
       'Content-Type',

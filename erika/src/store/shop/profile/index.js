@@ -10,7 +10,7 @@ const initialState = {
 export const getUserProfile = createAsyncThunk(
   '/order/getUserProfile',
   async (_id) => {
-    const response = await axios.get(`http://localhost:5000/api/common/profile/${_id}`);
+    const response = await axios.get(`https://erikahennaherbal.com/api/common/profile/${_id}`);
     return response.data;
   }
 );
@@ -19,7 +19,7 @@ export const getUserProfile = createAsyncThunk(
 export const updateUserProfile = createAsyncThunk(
   '/order/updateUserProfile',
   async ({ _id, username, email }) => {  // Corrected parameter destructuring
-    const response = await axios.put(`http://localhost:5000/api/common/profile/update/${_id}`, {
+    const response = await axios.put(`https://erikahennaherbal.com/api/common/profile/update/${_id}`, {
       username, // Use the correct object structure
       email,
     });

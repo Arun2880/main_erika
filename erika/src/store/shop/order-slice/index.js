@@ -13,7 +13,7 @@ const initialState = {
 };
 
 export const createNewOrder = createAsyncThunk('/order/createNewOrder', async(orderData)=>{
- const response = await axios.post(`http://localhost:5000/api/shop/order/create`, orderData);
+ const response = await axios.post(`https://erikahennaherbal.com/api/shop/order/create`, orderData);
 
  console.log("orderrr dataa:", orderData);
 
@@ -22,14 +22,14 @@ export const createNewOrder = createAsyncThunk('/order/createNewOrder', async(or
 
 
 export const CapturePayment = createAsyncThunk('/order/CapturePayment', async({payerId,paymentId, orderId})=>{
-  const response = await axios.post(`http://localhost:5000/api/shop/order/capture`, {payerId,paymentId, orderId,});
+  const response = await axios.post(`https://erikahennaherbal.com/api/shop/order/capture`, {payerId,paymentId, orderId,});
  
  
   return response.data;
  })
  
 export const getAllOrdersByUser = createAsyncThunk('/order/getAllOrdersByUser', async(UserId)=>{
-  const response = await axios.get(`http://localhost:5000/api/shop/order/list/${UserId}`);
+  const response = await axios.get(`https://erikahennaherbal.com/api/shop/order/list/${UserId}`);
 
   console.log("get all orders by user", UserId);
    
@@ -42,20 +42,20 @@ export const getAllOrdersByUser = createAsyncThunk('/order/getAllOrdersByUser', 
  })
 
  export const getOrderDetails = createAsyncThunk('/order/getOrderDetails', async(id)=>{
-  const response = await axios.get(`http://localhost:5000/api/shop/order/details/${id}`);
+  const response = await axios.get(`https://erikahennaherbal.com/api/shop/order/details/${id}`);
  
  
   return response.data;
  })
 
  export const deleteOrder = createAsyncThunk('/order/delete', async(id)=>{
-  const response = await axios.delete(`http://localhost:5000/api/shop/order/delete/${id}`);
+  const response = await axios.delete(`https://erikahennaherbal.com/api/shop/order/delete/${id}`);
   return response.data;
 
  })
 
  export const cancellReason = createAsyncThunk('/order/reason', async({userId, reason, payementStatus})=>{
- const response = await axios.post ('http://localhost:5000/api/shop/order/delete/reason',{userId, reason, payementStatus})
+ const response = await axios.post ('https://erikahennaherbal.com/api/shop/order/delete/reason',{userId, reason, payementStatus})
  return response.data;
  })
 

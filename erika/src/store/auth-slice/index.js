@@ -9,7 +9,7 @@ const initialState = {
 
 export const registerUser = createAsyncThunk('/auth/register',
   async (formData) => {
-    const response = await axios.post(`http://localhost:5000/api/auth/register`, formData,
+    const response = await axios.post(`https://erikahennaherbal.com/api/auth/register`, formData,
       {
         withCredentials: true,
       }
@@ -23,7 +23,7 @@ export const registerUser = createAsyncThunk('/auth/register',
 
 export const Login = createAsyncThunk('/auth/login',
   async (formData) => {
-    const response = await axios.post(`http://localhost:5000/api/auth/Login`, formData,
+    const response = await axios.post(`https://erikahennaherbal.com/api/auth/Login`, formData,
       {
         withCredentials: true,
       }
@@ -38,7 +38,7 @@ export const Login = createAsyncThunk('/auth/login',
 
 export const checkAuth = createAsyncThunk('/auth/checkauth',
   async () => {
-    const response = await axios.get(`http://localhost:5000/api/auth/checkauth`, 
+    const response = await axios.get(`https://erikahennaherbal.com/api/auth/checkauth`, 
        {
         withCredentials: true,
         headers : {'Cache-Control' :'no-store, no-cache, must-revalidate, proxy-revalidate',
@@ -53,7 +53,7 @@ export const checkAuth = createAsyncThunk('/auth/checkauth',
 
 export const Logout = createAsyncThunk('/auth/logout',
   async (formData) => {
-    const response = await axios.post(`http://localhost:5000/api/auth/logout`, {},
+    const response = await axios.post(`https://erikahennaherbal.com/api/auth/logout`, {},
       {
         withCredentials: true,
       }

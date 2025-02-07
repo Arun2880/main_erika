@@ -18,7 +18,7 @@ export const addInfluencer = createAsyncThunk(
   'influencer/add', // Updated action name for clarity
   async (formData, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/influencer/add', formData);
+      const response = await axios.post('https://erikahennaherbal.com/api/admin/influencer/add', formData);
       return response.data; 
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message); // Handle missing response gracefully
@@ -28,7 +28,7 @@ export const addInfluencer = createAsyncThunk(
 
 export const getInfluencerList = createAsyncThunk('influencer/get', async()=>{
   try {
-    const response = await axios.get('http://localhost:5000/api/admin/influencer/get')
+    const response = await axios.get('https://erikahennaherbal.com/api/admin/influencer/get')
     return response.data;
   
   }
@@ -39,7 +39,7 @@ export const getInfluencerList = createAsyncThunk('influencer/get', async()=>{
 
 export const singleInfluencer= createAsyncThunk('singleInflueincer/details', async(influencerId)=>{
   try{
-    const response = await axios.get(`http://localhost:5000/api/admin/influencer/details/${influencerId}`);
+    const response = await axios.get(`https://erikahennaherbal.com/api/admin/influencer/details/${influencerId}`);
  
     return response.data;
   }
@@ -51,7 +51,7 @@ export const singleInfluencer= createAsyncThunk('singleInflueincer/details', asy
 export const verifyrefferal = createAsyncThunk('verify/refferal', async(refferal)=>{
   
   try{
- const response = await axios.post('http://localhost:5000/api/shop/refferal/verify',{ refferal});
+ const response = await axios.post('https://erikahennaherbal.com/api/shop/refferal/verify',{ refferal});
  return response.data;
    
   }
@@ -63,7 +63,7 @@ export const verifyrefferal = createAsyncThunk('verify/refferal', async(refferal
 export const verifyEmailInFluencer = createAsyncThunk('verify/email', async(email)=>{
   
   try{
- const response = await axios.post('http://localhost:5000/api/shop/refferal/verify/email',{ email});
+ const response = await axios.post('https://erikahennaherbal.com/api/shop/refferal/verify/email',{ email});
  return response.data;
    
   }
@@ -76,7 +76,7 @@ export const verifyEmailInFluencer = createAsyncThunk('verify/email', async(emai
 export const fetchRefferal = createAsyncThunk('fetch/refferal', async(referral)=>{
   
   try{
- const response = await axios.post('http://localhost:5000/api/shop/refferal/fetch',{referral});
+ const response = await axios.post('https://erikahennaherbal.com/api/shop/refferal/fetch',{referral});
  return response.data;
    
   }
@@ -87,7 +87,7 @@ export const fetchRefferal = createAsyncThunk('fetch/refferal', async(referral)=
 
 export const fetchReason = createAsyncThunk('influencer/reason', async()=>{
   try {
-    const response = await axios.get('http://localhost:5000/api/admin/influencer/get/reason')
+    const response = await axios.get('https://erikahennaherbal.com/api/admin/influencer/get/reason')
     return response.data;
   
   }    

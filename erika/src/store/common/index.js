@@ -10,20 +10,20 @@ const initialState = {
 
 
 export const getFeatureImage = createAsyncThunk('/order/getFeatureImage', async()=>{
-  const response = await axios.get(`http://localhost:5000/api/common/feature/get`); 
+  const response = await axios.get(`https://erikahennaherbal.com/api/common/feature/get`); 
  
   return response.data;
  })
  
 
  export const addFeatureImage = createAsyncThunk('/order/addFeatureImage', async(image)=>{
-  const response = await axios.post(`http://localhost:5000/api/common/feature/add`, {image}); 
+  const response = await axios.post(`https://erikahennaherbal.com/api/common/feature/add`, {image}); 
  
   return response.data;
  })
 
  export const fetureImageDelete = createAsyncThunk('/order/fetureImageDelete', async(_id)=>{
-  const response = await axios.delete(`http://localhost:5000/api/common/feature/delete/${_id}`, {_id}); 
+  const response = await axios.delete(`https://erikahennaherbal.com/api/common/feature/delete/${_id}`, {_id}); 
  
   return response.data;
  })

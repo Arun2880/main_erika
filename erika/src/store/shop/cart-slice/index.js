@@ -9,7 +9,7 @@ const initialState = {
 
 export const addToCart= createAsyncThunk('cart/addToCart', async({userId, productId, quantity})=>{
 
-  const response = await axios.post('http://localhost:5000/api/shop/cart/add', {
+  const response = await axios.post('https://erikahennaherbal.com/api/shop/cart/add', {
     userId, productId, quantity,
   });
 
@@ -20,7 +20,7 @@ export const addToCart= createAsyncThunk('cart/addToCart', async({userId, produc
 
 export const fetchCartItem= createAsyncThunk('cart/fetchCartItem', async(userId)=>{
 
-  const response = await axios.get(`http://localhost:5000/api/shop/cart/get/${userId}`
+  const response = await axios.get(`https://erikahennaherbal.com/api/shop/cart/get/${userId}`
 
   );
 
@@ -32,7 +32,7 @@ export const fetchCartItem= createAsyncThunk('cart/fetchCartItem', async(userId)
 
 export const deleteCartItem= createAsyncThunk('cart/deleteCartItem', async({userId, productId})=>{
 
-  const response = await axios.delete(`http://localhost:5000/api/shop/cart/${userId}/${productId}`, );
+  const response = await axios.delete(`https://erikahennaherbal.com/api/shop/cart/${userId}/${productId}`, );
 
   return response.data
 
@@ -42,7 +42,7 @@ export const deleteCartItem= createAsyncThunk('cart/deleteCartItem', async({user
 
 export const updateCartItemQty= createAsyncThunk('cart/updateCartItemQty', async({userId, productId, quantity})=>{
 
-  const response = await axios.put('http://localhost:5000/api/shop/cart/update-cart', {
+  const response = await axios.put('https://erikahennaherbal.com/api/shop/cart/update-cart', {
     userId,
     productId,
     quantity,

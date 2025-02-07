@@ -9,13 +9,13 @@ const initialState = {
 
 
 export const addReview = createAsyncThunk('/order/addReview', async({productId, userId,userName,reviewMessage, reviewValue})=>{
-  const response = await axios.post(`http://localhost:5000/api/shop/review/add`, {productId, userId,userName,reviewMessage, reviewValue}); 
+  const response = await axios.post(`https://erikahennaherbal.com/api/shop/review/add`, {productId, userId,userName,reviewMessage, reviewValue}); 
  
   return response.data;
  })
 
  export const getReviews = createAsyncThunk('/order/getReviews', async(id)=>{
-  const response = await axios.get(`http://localhost:5000/api/shop/review/${id}`); 
+  const response = await axios.get(`https://erikahennaherbal.com/api/shop/review/${id}`); 
  
   return response.data;
  })

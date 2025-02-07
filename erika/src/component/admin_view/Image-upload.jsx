@@ -58,7 +58,7 @@ const ProductImage = ({
 
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/admin/products/upload-image",
+          "https://erikahennaherbal.com/api/admin/products/upload-image",
           formData,
           {
             headers: {
